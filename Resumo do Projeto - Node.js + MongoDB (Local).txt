@@ -1,0 +1,29 @@
+Neste projeto foram criados scripts ".js" para inserir, deletar, 
+atualizar e criar um banco de dados NOSQL (MongoDB) usando Node.js.
+Criamos o projeto Node (package.json), instalamos os drivers do mongodb
+na pasta do projeto para criar a conexão com o banco local e executamos 
+os scripts no terminal usando node "NomeDoScript.js".
+
+Etapas realizadas:
+Inicializamos um projeto Node.js
+Comando:
+npm init -y
+
+Instalamos o driver oficial do MongoDB
+Comando:
+npm install mongodb
+
+Criamos scripts .js
+
+Executamos os scripts pelo terminal com:
+
+node nome-do-script.js
+
+Conceitos aplicados:
+Usamos o MongoDB local (mongodb://localhost:27017)
+
+Trabalhamos com coleções (equivalentes a tabelas)
+
+Manipulamos documentos JSON (registros)
+
+Utilizamos o MongoClient do pacote mongodb para conexão
