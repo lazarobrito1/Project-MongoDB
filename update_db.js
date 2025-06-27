@@ -1,5 +1,7 @@
+require('dotenv').config();
 const { MongoClient } = require("mongodb");
-const url = "mongodb://localhost:27017";
+
+const url = process.env.MONGO_URI;
 
 async function run() {
   const client = new MongoClient(url);
@@ -10,7 +12,7 @@ async function run() {
     const alunos = dbo.collection("alunos");
 
     // Exemplo: Atualizar o curso do aluno "Lucas" para "Ciência da Computação"
-    const filtro = { nome: "Lucas" }; // filtro para achar o aluno
+    const filtro = { nome: "Carla" }; // filtro para achar o aluno
     const atualizacao = { $set: { curso: "Ciência da Computação" } }; // o que será atualizado
 
     const resultado = await alunos.updateOne(filtro, atualizacao);

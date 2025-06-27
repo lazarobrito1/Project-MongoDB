@@ -1,5 +1,7 @@
+require('dotenv').config();
 const { MongoClient } = require("mongodb");
-const url = "mongodb://localhost:27017/escola";
+
+const url = process.env.MONGO_URI;
 
 async function run() {
     const client = new MongoClient(url);
@@ -7,10 +9,17 @@ async function run() {
     try {
         await client.connect();
         const dbo = client.db("escola");
-        await dbo.createCollection("alunos");
-        console.log("Coleção de alunos criada com sucesso!");
+
+        const collections = await dbo.listCollections({ name: "alunos" }).toArray();
+        if (collections.length === 0) {
+            await dbo.createCollection("alunos");
+            console.log("Coleção de alunos criada com sucesso!");
+        } else {
+            console.log("Coleção de alunos já existe.");
+        }
+
     } catch (err) {
-        console.error("Erro ao criar coleção:", err);
+        console.error("Erro:", err);
     } finally {
         await client.close();
     }
