@@ -20,7 +20,6 @@ Executamos os scripts pelo terminal com:
 node nome-do-script.js
 
 Conceitos aplicados:
-Usamos o MongoDB local (mongodb://localhost:27017)
 
 Trabalhamos com coleções (equivalentes a tabelas)
 
