@@ -1,6 +1,4 @@
-# Project-MongoDB
-Neste projeto foram criados scripts ".js" para inserir, deletar, 
-atualizar e criar um banco de dados NOSQL (MongoDB) usando Node.js.
-Criamos o projeto Node (package.json), instalamos os drivers do mongodb
-na pasta do projeto para criar a conexão com o banco local e executamos 
-os scripts no terminal usando node "NomeDoScript.js".
+Project-MongoDB
+
+In this project, .js scripts were created to insert, delete, update, and create a NoSQL database (MongoDB) using Node.js.
+We set up a Node project (package.json), installed the MongoDB drivers in the project folder to establish a connection with the local database, and executed the scripts in the terminal using node "ScriptName.js".
